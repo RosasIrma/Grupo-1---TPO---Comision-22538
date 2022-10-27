@@ -4,88 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Contactanos</title>
     <link href="Css/estilos.css" rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="ardilla.ico.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="Headerrr">
-            <img src="" alt="">
-            <h1 class="nombreHeader">PetShop</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="nosotros.html" class="centered">Sobre nosotros</a></li>
-                    <li><a href="sucursal.html" class="centered">Sucursales</a></li>
-                    <li><a href="index.html" class="centered">Contactanos</a> </li>              
-                </ul>
-                
-            </nav>
-        </header>
-    </div>
-    <div class="container-fluid"><!--CON ESTO:   <div class="container-fluid">   
-        <div class="jumbotron jumbotron-fluid"> PONGO EL JUMBOTRON A TODO EL ANCHO DE LA PANTALLA-->
-<h2 class="letras" id = "Animal">Nuestros Productos</h2>
-<section class = "container letras">
-<!--<div class="row container letras">--> 
-<div class="animal"><strong><h3 class="text-center" >Alimentos</h3></strong><a title="" target="_blank" href="https://www.puppis.com.ar/perros/alimentos"><img class="img-fluid imagenes" src="alimento.jpg.png" alt="Error en imagen" /></a>
-<p class="text-justify"><strong>Perros
-    Alimentos
-    Alimentos Secos (395)
-    Alimentos Húmedos (60)
-    Alimentos Medicados (39)
-    Alimentos para Necesidades Especiales (38)
-    Alimentos Naturales (24)
-    ¿Qué alimentos para perros puedo comprar?
-    Podés comprar online 5 tipos: alimento seco para perros, alimento húmedo, alimento medicado, para necesidades especialesy alimentos naturales.
-    ¿Hay comida para perros de todos los tamaños?
-    Los alimentos están diseñados para perros de todos los tamaños. El alimento para perros pequeños contempla las necesidades nutricionales específicas de ellos, además de tener una croqueta más chica para facilitar la masticación y digestión. El alimento para perros medianos o grandes tiene croquetas de mayor tamaño y nutrientes especiales para cumplir sus necesidades.
-    ¿Qué tamaño tienen las bolsas de alimentos para perros?
-    Las bolsas de alimentos para perros vienen en diferentes tamaños. Las presentaciones más comunes son de 1 Kg, 3 Kg, 7,5 Kg, 15 Kg y 21 Kg.
-    Sea cual sea la particularidad de tu mascota, en Puppis tenemos la mayor variedad de alimentos, con los mejores descuentos, pedilo y recibilo en tu casa!</strong></p>
-</div>
-<div class="animal imagen"><strong><h3 class="text-center" >Juguetes</h3></strong><a title="" target="_blank" href="https://www.puppis.com.ar/perros/accesorios/juguetes"><img class="img-fluid imagenes" src="jugue.jpg.png" alt="Error en imagen" /></a><!--CON ESTO: target="_blank" PUESTO EN EL TAG DEL LINK HACEMOS QUE LA APERTURA DEL ENLACE ABRA EN UNA VENTANA NUEVA -->
-<p class="text-justify"><strong>¿Qué juguetes para gatos existen?
-    Jugar y entretenerse es muy importante para tu mascota, por eso tenemos cañitas, varitas, peluches, pelotas, con Catnip y mucho más, para garantizarle todo lo que necesita a tu amigo gatuno.
-    ¿Cómo elegir juguetes para gatos?
-    Depende del material, del espacio y la función de los juguetes, y también de la edad de tu compañero felino. No es lo mismo si es un gatito bebé o un juguete para juguete para gatos senior
-    ¿Qué marcas puedo elegir?
-    Podés comparar modelos y precios de juguetes para gatos entre las distintas marcas. Conocé todos los juguetes de Animal Pet, Can Cat, Gigwi, Rascals, juguetes de nuestra propia marca y muchas más.</strong></p>
-</div>
-<div class="animal"><strong><h3 class="text-center" >Accesorios</h3></strong><a title="" target="_blank" href="https://www.puppis.com.ar/perros/accesorios"><img class="img-fluid imagenes" src="accesorios.jpg.png"></a><!--CON ESTO: target="_blank" PUESTO EN EL TAG DEL LINK HACEMOS QUE LA APERTURA DEL ENLACE ABRA EN UNA VENTANA NUEVA -->
-<p class="text-justify"><strong>Transportadoras para Perros: cajas, transportines, mochilas y más
-    ¿Cómo elegir el tamaño de la transportadora para mi perro?
-    Dependerá del medio de transporte que vayas a usar para elegir el mejor tipo. Es muy importante que midas a tu mascota y puedas elegir un transportín para perros donde pueda viajar cómodo.
-    ¿Cómo viajan los perros en un avión?
-    Los perros más grandes son transportados en una bodega de carga y los más pequeños que pesan hasta 8kg aproximadamente son transportados como equipaje de mano. Todo dependerá de cada aerolínea!
-    ¿Cómo transportar mascota en el auto?
-    Lo más importante es poder llevarla atada, llevar agua para que la mascota pueda hidratarse y hacer paradas esporádicas para que pueda descansar de viajar en el auto. Conocé otros elementos para auto ideales para viajar con tu perro.</strong></p>
-</div>
-    <footer>
-        <p class="letras dolar"> Envios al exterior con oferta: $799; el dolar oficial hoy: USD <span id="precio_dolar">0</span></p>
-        <div class="footer">
-            <p>copyright 2022 - 2023 - Grupo 1 </p>
-        </div>
-    </footer>
-    <script> 
-        function dolar(entrada, idspan) {
-            let Entrada = entrada;
-            fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
-                .then((response) => response.json())
-                .then((data) => {
-                    let dolarVenta = data[0]['casa']['venta']; 
-                    let numDolarVenta = parseFloat(dolarVenta);
-                    let precioEntradaDolar = Entrada / numDolarVenta;
-                    precioEntradaDolar = precioEntradaDolar.toFixed(2);
-                    var pdolar = document.getElementById(idspan);
-                    pdolar.innerHTML = precioEntradaDolar;
-                });
-        }
+
+    <h1>Bienvenidos a PetShop</h1>
+    <form action="https://formspree.io/f/celeste_uc@hotmail.com" id="formulario" method="POST"> 
+        <label><Strong>Nombre mascota:</Strong><input placeholder="Nombre mascota" name="Nombre mascota" type="text" id="nombre mascota"><br></label>
         
-        dolar(1000, "precio_dolar");
-    </script>
+        <label for="Tipo de mascota"><strong>Tipo de mascota:</strong></label>
+        <select id="Tipo de mascota" name="tipo">
+        <option>Perro</option>
+        <option>Gato</option>
+        <option>Cobayo</option>
+        <option>Otro</option>
+        </select><br>
+        
+        <label for="Edad"><strong>Edad:</strong><input placeholder="Edad" name="Edad"  type="number" min= 0 max= 35><br></label>
+        <label for="Raza"><strong>Raza:</strong><input placeholder="Raza" name="Raza" type="text" id="raza"><br></label>
+        <label for="color"><strong>Color de la mascota:</strong><input placeholder="Color" name="Color" type="color"><br></label>
+        <label><strong>E mail: </strong><input placeholder="E mail" name="E mail" type="text" Id="email" ><br></label>
+        <label><strong>Contraseña:</strong><input placeholder="Contraseña" name="Contraseña" type="password" id="contraseña"><br></label>
+        <label><strong>Macho: </strong><input name="Genero" type="radio" value="Macho"><br></label>
+        <label><strong>Hembra:</strong><input name="Genero" type="radio" value="Hembra"><br></label> <br>
+        <label><strong>Contanos mas sobre tu mascota</strong></label><br><textarea name="comentarios" cols="40" rows="10" placeholder="Cuentenos sus comentarios"></textarea><br>
+        <br><label><strong>Acepta bases y condiciones:</strong><input type="checkbox" name="bases_y_condiciones" value="acepta"></label><br>
+        <input type="Submit" value="Enviar Formulario">
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("formulario").addEventListener('submit', validarFormulario);
+        });
+
+        function validarFormulario(evento) {
+            evento.preventDefault();
+            var nombre = document.getElementById('nombre mascota').value;
+            if (nombre.length == 0) {
+                alert('No has escrito nada en el nombre');
+                return;
+            }
+            var raza = document.getElementById('raza').value;
+            if (raza.length == 0) {
+                alert('No has escrito nada en Raza');
+                return;
+            }
+            var email = document.getElementById('email').value;
+            if (email.length == 0) {
+                alert('No has escrito nada en el email');
+                return;
+            }
+            var contraseña = document.getElementById('contraseña').value;
+            if (contraseña.length < 6) {
+                alert('La clave no es válida');
+                return;
+            }
+            this.submit();
+        }
+</script>
 </body>
 </html>
