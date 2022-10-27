@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="Css/estilos.css" rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="ardilla.ico.ico">
 </head>
 <body>
-    <h1>Bienvenidos a PetShop, la web para que tus mascotas sean parte de nuestra comunidad, donde encontraras consejos para su cuidado y adiestramiento, servicios de veterinaria, snacs y accesorios para tus mascotas, ofertas y descuentos en consultas veterinarias y mucho mas!! <br>  Loguea a tu mascota:</h1>
-    
-    <form action="https://formspree.io/mayecoss@gmail.com"   
-    method="POST"> 
-        <label><Strong>Nombre mascota:</Strong><input placeholder="Nombre mascota" name="Nombre mascota" type="text" required><br></label>
+
+    <h1>Bienvenidos a PetShop</h1>
+    <form action="https://formspree.io/f/celeste_uc@hotmail.com" id="formulario" method="POST"> 
+        <label><Strong>Nombre mascota:</Strong><input placeholder="Nombre mascota" name="Nombre mascota" type="text" id="nombre mascota"><br></label>
         
         <label for="Tipo de mascota"><strong>Tipo de mascota:</strong></label>
         <select id="Tipo de mascota" name="tipo">
@@ -22,19 +22,52 @@
         <option>Otro</option>
         </select><br>
         
-        <label for="Edad"><strong>Edad:</strong><input placeholder="Edad" name="Edad"  type="number" min= 0 max= 35 required><br></label>
-        <label for="Raza"><strong>Raza:</strong><input placeholder="Raza" name="Raza" type="text" required><br></label>
+        <label for="Edad"><strong>Edad:</strong><input placeholder="Edad" name="Edad"  type="number" min= 0 max= 35><br></label>
+        <label for="Raza"><strong>Raza:</strong><input placeholder="Raza" name="Raza" type="text" id="raza"><br></label>
         <label for="color"><strong>Color de la mascota:</strong><input placeholder="Color" name="Color" type="color"><br></label>
-        <label><strong>E mail: </strong><input placeholder="E mail" name="E mail" type="text" required><br></label>
-        <label><strong>Contraseña:</strong><input placeholder="Contraseña" name="Contraseña" type="password" required><br></label>
+        <label><strong>E mail: </strong><input placeholder="E mail" name="E mail" type="text" Id="email" ><br></label>
+        <label><strong>Contraseña:</strong><input placeholder="Contraseña" name="Contraseña" type="password" id="contraseña"><br></label>
         <label><strong>Macho: </strong><input name="Genero" type="radio" value="Macho"><br></label>
         <label><strong>Hembra:</strong><input name="Genero" type="radio" value="Hembra"><br></label> <br>
         <label><strong>Contanos mas sobre tu mascota</strong></label><br><textarea name="comentarios" cols="40" rows="10" placeholder="Cuentenos sus comentarios"></textarea><br>
         <br><label><strong>Acepta bases y condiciones:</strong><input type="checkbox" name="bases_y_condiciones" value="acepta"></label><br>
-        <input type="Submit" value="Enviar Formulario"><br>
-        <h4>Aca podes ver nuestra veterinaria de confianza, abierta las 24hrs!</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.296818231919!2d-58.41876659708418!3d-34.596655194606974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb026fe44759%3A0x9332533fe99c2963!2sLeocan%20Veterinaria%20palermo%2024%20Hs.!5e0!3m2!1ses-419!2sar!4v1613005113778!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:2px solid rgb(10, 7, 7);" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>"></iframe>
-        <br>
+        <input type="Submit" value="Enviar Formulario">
     </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("formulario").addEventListener('submit', validarFormulario);
+        });
+
+        function validarFormulario(evento) {
+            evento.preventDefault();
+            var nombre = document.getElementById('nombre mascota').value;
+            if (nombre.length == 0) {
+                alert('No has escrito nada en el nombre');
+                return;
+            }
+            var raza = document.getElementById('raza').value;
+            if (raza.length == 0) {
+                alert('No has escrito nada en Raza');
+                return;
+            }
+            var email = document.getElementById('email').value;
+            if (email.length == 0) {
+                alert('No has escrito nada en el email');
+                return;
+            }
+            var contraseña = document.getElementById('contraseña').value;
+            if (contraseña.length < 6) {
+                alert('La clave no es válida');
+                return;
+            }
+            this.submit();
+        }
+    <footer>
+        <p class="letras dolar"> Envios al exterior con oferta: $799; en dolar oficial hoy: USD <span id="precio_dolar">0</span></p>
+        <div class="footer">
+            <p>copyright 2022 - 2023 - Grupo 1 </p>
+        </div>
+    </footer>
+</script>
 </body>
 </html>
